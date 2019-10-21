@@ -1,0 +1,23 @@
+<ion-content class="contenido ion-padding">
+  <div style="display:flex; flex-direction:column; height:100%">
+    
+      <div class="titulo">
+      ALARMA DE ROBO
+      </div>
+    <ion-button shape="round" class="boton" (click)="ToActivarAlarma()">
+      <img *ngIf="this.alarmaActivada==false" src="../../../assets/imgs/1348646-512.png" style="width: 300px;height:300px">
+      <img *ngIf="this.alarmaActivada==true" src="../../../assets/imgs/1348646-512(1).png" style="width: 300px;height:300px">
+    </ion-button>
+    <div class="mensaje">
+      {{message}}
+    </div>
+    <div class="mensaje-2">
+      {{message_2}}
+    </div>
+  </div>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="danger" (click)="LogOut()">
+      <ion-icon name="log-out"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
